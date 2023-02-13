@@ -62,4 +62,67 @@
 // console.log(typeof (null))
 // console.log(typeof(x))
 
-// 11. 
+// 11. alert, using concat.
+// alert('Hello' + ' Michelle Hokeness' + ', welcome to the JavaScript class!')
+
+// 12. Declare a variable called name and set it = my name
+// let name = 'Michelle Hokeness'
+// alert('Hello ' + name + ', welcome to the JavaScript class!')
+
+// 13. Declare a variable called course and set it = JS
+// let course = "JavaScript"
+// let name = "Michelle Hokeness"
+// alert('Hello ' + name + ', welcome to the ' + course + ' class!')
+
+// 14. add a line break before welcome in the alert above
+// let course = "JavaScript"
+// let name = "Michelle Hokeness"
+// alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
+
+// 15. Replace the string of my name with a prompt asking user for their name.
+
+// let course = "JavaScript"
+// let name = prompt('What is your name?')
+// alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
+
+// 16. Replace string of the class I'm taking with a prompt that asks user for the class they're taking.
+
+// let name = prompt('What is your name?')
+// let course = prompt('What class are you taking?')
+// alert('Hello ' + name + '.\nWelcome to the ' + course + ' class!')
+
+// 17. Declare a variable x = 10 and y = 20. Display sum in console.
+
+// let x = 10;
+// let y = 20;
+// console.log(x+y)
+
+// 18. Declare a variable x = 20, += 20 to that variable and display result in console.
+
+// let x = 20;
+// x += 20;
+// console.log(x)
+
+// 19. Declare a variable x = 20. *= 5 to variable and display result in console
+
+// let x = 20;
+// x *= 5;
+// console.log(x)
+
+// 20. Declare variable x = remainder of 20 / 3
+
+// let x = 2;
+// x /= 1;
+// console.log(x)
+
+// 21. Using comparison and logical operators, write an app that evaluates to true and display in the console.
+
+// let x = 3
+// let y = 16
+// console.log(x == 3 && y == 16)
+
+// 22. Using comparison and logical operators, write an app that evaluates to false and display in the console.
+
+// let myAge = 50
+// let yourAge = 'old'
+// console.log(myAge == 35 || yourAge != 'old')
