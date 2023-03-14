@@ -1,0 +1,17 @@
+form {
+    margin: 20px;
+    border: solid 2px orange;
+    background: #ebe3e3;
+}
+
+h1 {margin-left: 20px;}
+
+.box {
+    height: 650px;
+    width: 200%;
+}
+
+.form-select {width: 250px;}
+
+.mb-3 {width: 300px;}
+
