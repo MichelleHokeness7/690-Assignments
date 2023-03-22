@@ -79,6 +79,7 @@ form.addEventListener('click', (e) => {
         if (confirm('Are you sure you want to delete this employee?')) {
             // Remove
             deleteRow(e.target.parentElement.newRow[i])
+            downCount()
         }
     }
 })
