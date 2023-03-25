@@ -73,12 +73,12 @@ form.addEventListener('submit', (e) => {
 })
 
 // DELETE EMPLOYEE
-form.addEventListener('click', (e) => {
+table.addEventListener('click', (e) => {
     // check for delete btn bubbling
     if (e.target.classList.contains('delete')) {
         if (confirm('Are you sure you want to delete this employee?')) {
             // Remove
-            deleteRow(e.target.parentElement.newRow[i])
+            table.deleteRow(e.target.parentElement.innerText)
             downCount()
         }
     }
