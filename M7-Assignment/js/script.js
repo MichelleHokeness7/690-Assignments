@@ -78,7 +78,7 @@ table.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete')) {
         if (confirm('Are you sure you want to delete this employee?')) {
             // Remove
-            table.deleteRow(e.target.parentElement.innerText)
+            table.deleteRow(e.target.parentElement.parentElement.rowIndex)
             downCount()
         }
     }
