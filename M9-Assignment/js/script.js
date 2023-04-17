@@ -6,13 +6,17 @@
 //     [14545423, "Robin Banks", 7867, "robin@vectacorp.com", "Marketing"],
 //     [13413453, "Sue Wedge", 1235, "sue@vectacorp.com", "QA"]
 // ]
+// IMPORT THE MODULE
+import empList from './modules/init.js'
+
+let arrEmployees = empList
 
 // GET DOM ELEMENTS
 let empTable    = document.querySelector('#employees')
 let empCount    = document.querySelector('#empCount')
 
 // BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
-buildGrid(arrEmployees)
+buildGrid(arrEmployees.empList)
 
 // DELETE EMPLOYEE
 empTable.addEventListener('click', (e) => {
