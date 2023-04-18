@@ -7,16 +7,15 @@
 //     [13413453, "Sue Wedge", 1235, "sue@vectacorp.com", "QA"]
 // ]
 // IMPORT THE MODULE
-import empList from './modules/init.js'
+import * as employeesData from './modules/init.js'
 
-let arrEmployees = empList
 
 // GET DOM ELEMENTS
 let empTable    = document.querySelector('#employees')
 let empCount    = document.querySelector('#empCount')
 
 // BUILD THE EMPLOYEES TABLE WHEN THE PAGE LOADS
-buildGrid(arrEmployees.empList)
+buildGrid()
 
 // DELETE EMPLOYEE
 empTable.addEventListener('click', (e) => {
@@ -32,28 +31,33 @@ empTable.addEventListener('click', (e) => {
 })
 
 // BUILD THE EMPLOYEES GRID
-function buildGrid(arrEmployees) {
+function buildGrid() {
     // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
     empTable.lastElementChild.remove()
     // REBUILD THE TBODY FROM SCRATCH
     let tbody = document.createElement('tbody')
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     // REBUILDING THE ROW STRUCTURE
-    for (let employee of arrEmployees) {
-        tbody.innerHTML += 
-        `
-        <tr>
-            <td>${employee[0]}</td>
-            <td>${employee[1]}</td>
-            <td>${employee[2]}</td>
-            <td><a href="mailto:${employee[3]}">${employee[3]}</a></td>
-            <td>${employee[4]}</td>
-            <td><button class="btn btn-sm btn-danger delete">X</button></td>
-        </tr>
-        `
-    }
+    employeesData.fetchEmployees()
+        .then((data) => {
+            for (let employee of data) {
+                tbody.innerHTML += 
+                `
+                <tr>
+                    <td>${employee.id}</td>
+                    <td>${employee.name}</td>
+                    <td>${employee.ext}</td>
+                    <td><a href="mailto:${employee.email}">${employee.email}</a></td>
+                    <td>${employee.department}</td>
+                    <td><button class="btn btn-sm btn-danger delete">X</button></td>
+                </tr>
+                `
+            }
+            // UPDATE EMPLOYEE COUNT
+            empCount.value = `(${data.length})`
+        })
+    
     // BIND THE TBODY TO THE EMPLOYEE TABLE
     empTable.appendChild(tbody)
-    // UPDATE EMPLOYEE COUNT
-    empCount.value = `(${arrEmployees.length})`
+    
 }

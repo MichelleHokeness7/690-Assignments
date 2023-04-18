@@ -1,18 +1,8 @@
-async function fetchEmployees() {
+export async function fetchEmployees() {
     try {
         const response = await fetch('/data/employees.json')
         const data = await response.json()
-        for (let data of employees) {
-            document.body.innerHTML +=
-                `<p>
-                    ${data.id}<br>
-                    ${data.name}<br>
-                    ${data.ext}<br>
-                    ${data.email}<br>
-                    ${data.title}<br>
-                </p>
-                `
-        }
+        return data
     } catch (error) {
         console.error(error)
     }
@@ -20,5 +10,3 @@ async function fetchEmployees() {
 }
 fetchEmployees()
 
-// EXPORT THE FUNCTION
-export default { fetchEmployees }
