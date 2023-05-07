@@ -49,7 +49,7 @@ empTable.addEventListener('click', (e) => {
     // CONFIRM THE DELETE
         if (confirm('Are you sure you want to delete this employee?')) {
             // GET THE SELECTED ROWINDEX FOR THE TR (PARENTNODE.PARENTNODE)
-            let rowIndex = e.target.parentNode.parentNode.rowIndex
+            let rowIndex = e.target.parentElement.parentElement.rowIndex
             // REMOVE EMPLOYEE FROM ARRAY
             employeesArray.splice(rowIndex -1, 1)
             // BUILD THE GRID
