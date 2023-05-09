@@ -14,7 +14,5 @@
 // let min = Math.min(...numbers)
 // console.log(`The minimum number is: ${min} \nThe maximum number is: ${max}`);
 //STEP 5
-// const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-// let d = new Date()
-// let dayName = weekday[d.getDay()].slice(0, 1)
-// console.log(dayName)
+let userNum = prompt('Enter a number')
+console.log(Math.sqrt(userNum))
