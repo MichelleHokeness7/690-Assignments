@@ -14,5 +14,5 @@
 // let min = Math.min(...numbers)
 // console.log(`The minimum number is: ${min} \nThe maximum number is: ${max}`);
 //STEP 5
-let userNum = prompt('Enter a number')
-console.log(Math.sqrt(userNum))
+// let userNum = prompt('Enter a number')
+// console.log(Math.sqrt(userNum))
