@@ -13,14 +13,13 @@
 // console.log(monthName)
 //STEP 3
 // function isWeekend(date) {
-//     const dayOfWeek = date.getDay();
+//     const dayOfWeek = date.getDay()
 //     if (dayOfWeek === 0 || dayOfWeek === 6) {
 //       return true;
 //     } else {
 //       return false
 //     }
 //   }
-  
 //   const myDate = new Date()
 //   console.log((myDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })))
 //   console.log(`It is ${isWeekend(myDate)} that it is a weekend.`)
