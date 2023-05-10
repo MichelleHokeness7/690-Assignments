@@ -17,7 +17,7 @@
 //     if (dayOfWeek === 0 || dayOfWeek === 6) {
 //       return true;
 //     } else {
-//       return false;
+//       return false
 //     }
 //   }
   
